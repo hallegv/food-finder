@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import RestaurantList from "./components/RestaurantList.jsx";
 import SearchBar from "./components/SearchBar.jsx";
-import { data } from "./data";
+import { data } from "./restaurantdata/data";
 import { Container, Row, Col } from "react-bootstrap";
 
 function App() {
