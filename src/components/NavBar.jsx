@@ -1,6 +1,6 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-export default function NavBar(props) {
+export default function NavBar() {
   return (
     <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic">

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Container>
-      <SearchBar />
+      <NavBar />
       <Row>
         <Col>
           <RestaurantList restaurants={restaurants} />
