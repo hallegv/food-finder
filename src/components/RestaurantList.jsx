@@ -2,7 +2,6 @@ import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 export default function RestaurantList(props) {
   const { restaurants } = props;
-  console.log("posts", restaurants);
   return (
     <div style={{ paddingTop: 20 }}>
       <Row>

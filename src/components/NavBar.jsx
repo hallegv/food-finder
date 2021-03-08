@@ -1,6 +1,6 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
-export default function SearchBar(props) {
+export default function NavBar(props) {
   return (
     <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -8,9 +8,9 @@ export default function SearchBar(props) {
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item eventKey="1">American</Dropdown.Item>
-        <Dropdown.Item eventKey="2">Japanese</Dropdown.Item>
-        <Dropdown.Item eventKey="3">Italian</Dropdown.Item>
-        <Dropdown.Item eventKey="4">Chinese</Dropdown.Item>
+        <Dropdown.Item eventKey="2">Italian</Dropdown.Item>
+        <Dropdown.Item eventKey="3">Mexican</Dropdown.Item>
+        <Dropdown.Item eventKey="4">Cafes</Dropdown.Item>
         <Dropdown.Item eventKey="5" active>
           Greek
         </Dropdown.Item>
