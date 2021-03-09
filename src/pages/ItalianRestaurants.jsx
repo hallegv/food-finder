@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { italian } from "../restaurantdata/italian.js";
 import { Card, CardColumns } from "react-bootstrap";
 
-export default function recipeList(props) {
-  const { recipes } = props;
+export default function ItalianRestaurants(props) {
+  const { italianRestaurants } = props;
   return (
     <div style={{ paddingTop: 20 }}>
       <CardColumns>
-        {recipes &&
-          recipes.map((recipe) => (
+        {italianRestaurants &&
+          italianRestaurants.map((restaurant) => (
             <Card
-              key={recipe.id}
+              key={restaurant.id}
               style={{
                 backgroundColor: "red",
               }}
@@ -28,7 +29,7 @@ export default function recipeList(props) {
                     textAlign: "center",
                   }}
                 >
-                  {recipe.sourceName}
+                  {restaurant.name}
                 </Card.Title>
                 <Card.Text
                   style={{
@@ -38,11 +39,23 @@ export default function recipeList(props) {
                     textAlign: "center",
                   }}
                 >
-                  {recipe.extendedIngredients}
+                  {restaurant.location.address1}
+                  <p>
+                    {restaurant.location.city}, {restaurant.location.state}{" "}
+                    {restaurant.location.zip_code}
+                  </p>
                 </Card.Text>
-
+                <Card.Text
+                  style={{
+                    fontFamily: "Avenir",
+                    fontSize: "25px",
+                    textAlign: "center",
+                  }}
+                >
+                  {restaurant.display_phone}
+                </Card.Text>
                 <Card.Img
-                  src={recipe.image}
+                  src={restaurant.image_url}
                   style={{
                     display: "block",
                     marginLeft: "auto",

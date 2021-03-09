@@ -2,13 +2,29 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import RestaurantList from "./components/RestaurantList.jsx";
 import NavBar from "./components/NavBar.jsx";
-import { data } from "./restaurantdata/data";
 import { Container, Row, Col } from "react-bootstrap";
 
 function App() {
-  const [restaurants, setRestaurants] = useState([]);
+  const [recipe, setRecipes] = useState([]);
   useEffect(() => {
-    setRestaurants(data.businesses);
+    async function search() {
+      const response = await fetch(
+        `https://api.spoonacular.com/recipes/716429/information?apiKey=456626469b834d5980bc4d8e6b6d6e94&diet=vegetarian`,
+        {
+          method: "GET",
+          cor: "no-cors",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "456626469b834d5980bc4d8e6b6d6e94",
+            "Access-Control-Request-Method": "GET",
+            "Access-Control-Request-Headers": "X-Custom-Header",
+          },
+        }
+      );
+      console.log(response.json());
+    }
+    search();
   }, []);
 
   return (
@@ -16,7 +32,7 @@ function App() {
       <NavBar />
       <Row>
         <Col>
-          <RestaurantList restaurants={restaurants} />
+          <RestaurantList />
         </Col>
       </Row>
     </Container>
