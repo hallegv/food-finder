@@ -59,7 +59,7 @@ export default function MexicanRestaurants(props) {
                     display: "block",
                     marginLeft: "auto",
                     marginRight: "auto",
-                    width: "90%",
+                    width: "35vw",
                   }}
                 />
               </Card.Body>

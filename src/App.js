@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar.jsx";
 import AmericanRestaurants from "./pages/AmericanRestaurants.jsx";
 import ItalianRestaurants from "./pages/ItalianRestaurants.jsx";
 import MexicanRestaurants from "./pages/MexicanRestaurants";
 import CafeRestaurants from "./pages/CafeRestaurants";
+import Header from "./components/Header";
 import { italian } from "./restaurantdata/italian";
 import { mexican } from "./restaurantdata/mexican";
 import { cafe } from "./restaurantdata/cafe";
@@ -17,6 +17,19 @@ function App() {
   const [mexicanRestaurants, setMexicanRestaurants] = useState([]);
   const [cafeRestaurants, setCafeRestaurants] = useState([]);
   const [americanRestaurants, setAmericanRestaurants] = useState([]);
+
+  // const displayAmericanRestaurants = () => {
+  //   console.log("clicked");
+  //   return (
+  //     <Container>
+  //       <Row>
+  //         <Col>
+  //           <AmericanRestaurants americanRestaurants={americanRestaurants} />
+  //         </Col>
+  //       </Row>
+  //     </Container>
+  //   );
+  // };
 
   useEffect(() => {
     setItalianRestaurants(italian.businesses);
@@ -35,57 +48,30 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Router>
-        <div className="container">
-          <nav>
-            <ul>
-              <li
-                style={{
-                  fontFamily: "sans-serif",
-                  fontSize: "30px",
-                  backgroundColor: "red",
-                }}
-              >
-                <Link to="/pages/AmericanRestaurants">American</Link>
-              </li>
-            </ul>
-          </nav>
-          <Switch>
-            <Route exact path="/" component={App} />
-            <Route
-              exact
-              path="/pages/AmericanRestaurants"
-              component={AmericanRestaurants}
-            />
-          </Switch>
-        </div>
-      </Router>
-
-      <Container>
-        <NavBar />
-        <Row>
-          <Col>
-            <ItalianRestaurants italianRestaurants={italianRestaurants} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <MexicanRestaurants mexicanRestaurants={mexicanRestaurants} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <CafeRestaurants cafeRestaurants={cafeRestaurants} />
-          </Col>
-        </Row>
-        {/* <Row>
-          <Col>
-            <AmericanRestaurants americanRestaurants={americanRestaurants} />
-          </Col>
-        </Row> */}
-      </Container>
-    </>
+    <Container>
+      <Header />
+      <NavBar />
+      <Row>
+        <Col>
+          <ItalianRestaurants italianRestaurants={italianRestaurants} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <MexicanRestaurants mexicanRestaurants={mexicanRestaurants} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <CafeRestaurants cafeRestaurants={cafeRestaurants} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <AmericanRestaurants americanRestaurants={americanRestaurants} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
