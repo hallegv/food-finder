@@ -1,18 +1,18 @@
 import React from "react";
 
-export default function Header() {
+export default function HomePage() {
   return (
     <h1
       style={{
         backgroundColor: "CornflowerBlue",
-        fontSize: "10vh",
+        fontSize: "5.59vh",
         border: "0px",
         margin: "0px",
-        padding: "0px",
+        padding: "200px",
         textAlign: "center",
       }}
     >
-      Food Finder
+      An app for vegetarian-friendly restaurants in the LMU area!
     </h1>
   );
 }

@@ -13,11 +13,23 @@ export default function NavBar({setCuisine}) {
     //     <Dropdown.Item eventKey="4">Cafes</Dropdown.Item>
     //   </Dropdown.Menu>
     // </Dropdown>
+    <h1
+      style={{
+        backgroundColor: "CornflowerBlue",
+        fontSize: "4vh",
+        border: "0px",
+        margin: "0px",
+        padding: "2px",
+        textAlign: "center",
+      }}
+    >
+      
     <ul>
       <li onClick={() => setCuisine("american")}>American</li>
       <li onClick={() => setCuisine("italian")}>Italian</li>
       <li onClick={() => setCuisine("mexican")}>Mexican</li>
       <li onClick={() => setCuisine("cafe")}>Cafes</li>
     </ul>
+    </h1>
   );
 }

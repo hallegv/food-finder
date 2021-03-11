@@ -7,6 +7,7 @@ import ItalianRestaurants from "./pages/ItalianRestaurants.jsx";
 import MexicanRestaurants from "./pages/MexicanRestaurants";
 import CafeRestaurants from "./pages/CafeRestaurants";
 import Header from "./components/Header";
+import HomePage from "./components/HomePage";
 import { italian } from "./restaurantdata/italian";
 import { mexican } from "./restaurantdata/mexican";
 import { cafe } from "./restaurantdata/cafe";
@@ -51,6 +52,7 @@ function App() {
   return (
     <Container>
       <Header />
+      <HomePage />
       { <NavBar setCuisine = {setCuisine} /> }
       {cuisine === "italian" &&
       <Row>
