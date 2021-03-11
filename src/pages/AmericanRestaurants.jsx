@@ -4,7 +4,7 @@ export default function CafeRestaurants(props) {
   const { americanRestaurants } = props;
 
   return (
-    <div>
+    <div style={{ paddingTop: 20 }}>
       <CardColumns>
         {americanRestaurants &&
           americanRestaurants.map((restaurant) => (
