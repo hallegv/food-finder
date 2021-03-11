@@ -20,19 +20,6 @@ function App() {
   const [americanRestaurants, setAmericanRestaurants] = useState([]);
   const [cuisine, setCuisine] = useState("polish");
 
-  // const displayAmericanRestaurants = () => {
-  //   console.log("clicked");
-  //   return (
-  //     <Container>
-  //       <Row>
-  //         <Col>
-  //           <AmericanRestaurants americanRestaurants={americanRestaurants} />
-  //         </Col>
-  //       </Row>
-  //     </Container>
-  //   );
-  // };
-
   useEffect(() => {
     setItalianRestaurants(italian.businesses);
   }, []);
@@ -53,35 +40,35 @@ function App() {
     <Container>
       <Header />
       <HomePage />
-      { <NavBar setCuisine = {setCuisine} /> }
-      {cuisine === "italian" &&
-      <Row>
-        <Col>
-          <ItalianRestaurants italianRestaurants={italianRestaurants} />
-        </Col>
-      </Row>
-      }
-      {cuisine === "mexican" &&
-      <Row>
-        <Col>
-          <MexicanRestaurants mexicanRestaurants={mexicanRestaurants} />
-        </Col>
-      </Row>
-      }
-      {cuisine === "cafe" &&
-      <Row>
-        <Col>
-          <CafeRestaurants cafeRestaurants={cafeRestaurants} />
-        </Col>
-      </Row>
-      }
-      {cuisine === "american" &&
-      <Row>
-        <Col>
-          <AmericanRestaurants americanRestaurants={americanRestaurants} />
-        </Col>
-      </Row>
-      }
+      {<NavBar setCuisine={setCuisine} />}
+      {cuisine === "italian" && (
+        <Row>
+          <Col>
+            <ItalianRestaurants italianRestaurants={italianRestaurants} />
+          </Col>
+        </Row>
+      )}
+      {cuisine === "mexican" && (
+        <Row>
+          <Col>
+            <MexicanRestaurants mexicanRestaurants={mexicanRestaurants} />
+          </Col>
+        </Row>
+      )}
+      {cuisine === "cafe" && (
+        <Row>
+          <Col>
+            <CafeRestaurants cafeRestaurants={cafeRestaurants} />
+          </Col>
+        </Row>
+      )}
+      {cuisine === "american" && (
+        <Row>
+          <Col>
+            <AmericanRestaurants americanRestaurants={americanRestaurants} />
+          </Col>
+        </Row>
+      )}
     </Container>
   );
 }

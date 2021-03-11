@@ -1,18 +1,7 @@
 import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-export default function NavBar({setCuisine}) {
+
+export default function NavBar({ setCuisine }) {
   return (
-    // <Dropdown>
-    //   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    //     Food Cuisine
-    //   </Dropdown.Toggle>
-    //   <Dropdown.Menu>
-    //     <Dropdown.Item eventKey="1">American</Dropdown.Item>
-    //     <Dropdown.Item eventKey="2">Italian</Dropdown.Item>
-    //     <Dropdown.Item eventKey="3">Mexican</Dropdown.Item>
-    //     <Dropdown.Item eventKey="4">Cafes</Dropdown.Item>
-    //   </Dropdown.Menu>
-    // </Dropdown>
     <h1
       style={{
         backgroundColor: "CornflowerBlue",
@@ -23,23 +12,24 @@ export default function NavBar({setCuisine}) {
         textAlign: "center",
       }}
     >
-      
-    <ul style={{
-        fontSize: "4vh",
-        border: "0px",
-        margin: "0px",
-        padding: "2px",
-        paddingBottom: "50px",
-        textAlign: "center",
-        listStyle: "none",
-        cursor: "pointer",
-        textDecoration: "underline"
-      }}>
-      <li onClick={() => setCuisine("american")}>American</li>
-      <li onClick={() => setCuisine("italian")}>Italian</li>
-      <li onClick={() => setCuisine("mexican")}>Mexican</li>
-      <li onClick={() => setCuisine("cafe")}>Cafes</li>
-    </ul>
+      <ul
+        style={{
+          fontSize: "4vh",
+          border: "0px",
+          margin: "0px",
+          padding: "2px",
+          paddingBottom: "50px",
+          textAlign: "center",
+          listStyle: "none",
+          cursor: "pointer",
+          textDecoration: "underline",
+        }}
+      >
+        <li onClick={() => setCuisine("american")}>American</li>
+        <li onClick={() => setCuisine("italian")}>Italian</li>
+        <li onClick={() => setCuisine("mexican")}>Mexican</li>
+        <li onClick={() => setCuisine("cafe")}>Cafes</li>
+      </ul>
     </h1>
   );
 }
