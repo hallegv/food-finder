@@ -11,7 +11,7 @@ export default function CafeRestaurants(props) {
             <Card
               key={restaurant.id}
               style={{
-                backgroundColor: "red",
+                backgroundColor: "MediumSlateBlue",
               }}
             >
               <Card.Body

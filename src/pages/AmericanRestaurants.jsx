@@ -11,7 +11,7 @@ export default function CafeRestaurants(props) {
             <Card
               key={restaurant.id}
               style={{
-                backgroundColor: "red",
+                backgroundColor: "LightPink",
               }}
             >
               <Card.Body
@@ -64,7 +64,7 @@ export default function CafeRestaurants(props) {
                 />
               </Card.Body>
               <Card.Footer
-                style={{ textAlign: "right", padding: 5 }}
+                style={{ textAlign: "right", padding: 0 }}
               ></Card.Footer>
             </Card>
           ))}

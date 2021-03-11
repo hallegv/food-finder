@@ -25,7 +25,14 @@ export default function NavBar({setCuisine}) {
     >
       
     <ul>
-      <li onClick={() => setCuisine("american")}>American</li>
+      <li style={{
+        backgroundColor: "Hot Pink",
+        fontSize: "4vh",
+        border: "0px",
+        margin: "0px",
+        padding: "2px",
+        textAlign: "center",
+      }} onClick={() => setCuisine("american")}>American</li>
       <li onClick={() => setCuisine("italian")}>Italian</li>
       <li onClick={() => setCuisine("mexican")}>Mexican</li>
       <li onClick={() => setCuisine("cafe")}>Cafes</li>

@@ -11,7 +11,7 @@ export default function MexicanRestaurants(props) {
             <Card
               key={restaurant.id}
               style={{
-                backgroundColor: "red",
+                backgroundColor: "Orange",
               }}
             >
               <Card.Body
