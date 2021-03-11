@@ -1,13 +1,13 @@
 import { Card, CardColumns } from "react-bootstrap";
 
-export default function ItalianRestaurants(props) {
-  const { italianRestaurants } = props;
+export default function CafeRestaurants(props) {
+  const { americanRestaurants } = props;
 
   return (
     <div style={{ paddingTop: 20 }}>
       <CardColumns>
-        {italianRestaurants &&
-          italianRestaurants.map((restaurant) => (
+        {americanRestaurants &&
+          americanRestaurants.map((restaurant) => (
             <Card
               key={restaurant.id}
               style={{

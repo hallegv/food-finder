@@ -1,5 +1,5 @@
 export const cafe = {
-  cafes: [
+  businesses: [
     {
       id: "VKFFmQgiufr3jMapNUvzrg",
       alias: "caffè-and-market-newport-beach-2",

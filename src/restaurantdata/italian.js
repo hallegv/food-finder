@@ -1,5 +1,5 @@
 export const italian = {
-  italianfood: [
+  businesses: [
     {
       id: "SHF_vf1wyUa5zomj_ZJ8sQ",
       alias: "casa-modena-culver-city-2",
