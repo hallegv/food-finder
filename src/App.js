@@ -17,6 +17,7 @@ function App() {
   const [mexicanRestaurants, setMexicanRestaurants] = useState([]);
   const [cafeRestaurants, setCafeRestaurants] = useState([]);
   const [americanRestaurants, setAmericanRestaurants] = useState([]);
+  const [cuisine, setCuisine] = useState("polish");
 
   // const displayAmericanRestaurants = () => {
   //   console.log("clicked");
@@ -50,27 +51,35 @@ function App() {
   return (
     <Container>
       <Header />
-      {/* <NavBar /> */}
+      { <NavBar setCuisine = {setCuisine} /> }
+      {cuisine === "italian" &&
       <Row>
         <Col>
           <ItalianRestaurants italianRestaurants={italianRestaurants} />
         </Col>
       </Row>
+      }
+      {cuisine === "mexican" &&
       <Row>
         <Col>
           <MexicanRestaurants mexicanRestaurants={mexicanRestaurants} />
         </Col>
       </Row>
+      }
+      {cuisine === "cafe" &&
       <Row>
         <Col>
           <CafeRestaurants cafeRestaurants={cafeRestaurants} />
         </Col>
       </Row>
+      }
+      {cuisine === "american" &&
       <Row>
         <Col>
           <AmericanRestaurants americanRestaurants={americanRestaurants} />
         </Col>
       </Row>
+      }
     </Container>
   );
 }
