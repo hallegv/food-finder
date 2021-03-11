@@ -4,7 +4,7 @@ export default function CafeRestaurants(props) {
   const { americanRestaurants } = props;
 
   return (
-    <div style={{ paddingTop: 20 }}>
+    <div>
       <CardColumns>
         {americanRestaurants &&
           americanRestaurants.map((restaurant) => (
@@ -24,7 +24,7 @@ export default function CafeRestaurants(props) {
                     fontFamily: "Avenir",
                     fontSize: "50px",
                     fontWeight: "bold",
-                    margins: "5px",
+                    margin: "0px",
                     textAlign: "center",
                   }}
                 >

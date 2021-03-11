@@ -50,7 +50,7 @@ function App() {
   return (
     <Container>
       <Header />
-      <NavBar />
+      {/* <NavBar /> */}
       <Row>
         <Col>
           <ItalianRestaurants italianRestaurants={italianRestaurants} />
